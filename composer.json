@@ -1,0 +1,61 @@
+{
+    "name": "mohamed7sameer/backpack-store",
+    "description": "Implement Products API & MYSQL for dackpack",
+    "keywords": [
+        "mohamed7sameer",
+        "backpack",
+        "laravel",
+        "products"
+    ],
+    "homepage": "https://github.com/mohamed7sameer/backpack-store",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohamed Samir",
+            "email": "info@mohammed-samir.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+      "php": ">=7.4"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Backpack\\Store\\": "src",
+            "Backpack\\Store\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Backpack\\Store\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Backpack\\Store\\ServiceProvider"
+            ],
+            "aliases": {
+                "Product": "Backpack\\Store\\Facades\\Store"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
