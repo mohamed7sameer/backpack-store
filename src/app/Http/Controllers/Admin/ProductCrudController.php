@@ -27,7 +27,7 @@ class ProductCrudController extends ProductCrudBase
     use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
     //use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 
-    use mohamed7sameer\backpackStore\app\Traits\Controllers\Admin\ProductCrud;
+    // use mohamed7sameer\backpackStore\app\Traits\Controllers\Admin\ProductCrud;
 
     
     
